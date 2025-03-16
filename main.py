@@ -93,7 +93,6 @@ class CityApp:
         save_json(IDEAS_FILE, self.ideas)
         messagebox.showinfo("Успех", "Идея добавлена!")
 
-# Запуск Tkinter
 if __name__ == "__main__":
     root = tk.Tk()
     app = CityApp(root)
