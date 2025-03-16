@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Карта идей</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Подключаем только Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { width: 100%; height: 100vh; }
+        .custom-popup .leaflet-popup-content-wrapper {
+            background: #2c3e50;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .custom-popup .leaflet-popup-tip {
+            background: #2c3e50;
+        }
+        .idea-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #ecf0f1;
+        }
+        .idea-description {
+            font-size: 14px;
+            color: #bdc3c7;
+        }
+        .idea-form {
+            padding: 10px;
+            min-width: 200px;
+        }
+        .idea-form input, 
+        .idea-form textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .idea-form textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
+        .form-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .idea-form button {
+            flex: 1;
+            background: #2980b9;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .idea-form button.cancel-btn {
+            background: #95a5a6;
+        }
+        .idea-form button:hover {
+            background: #3498db;
+        }
+        .idea-form button.cancel-btn:hover {
+            background: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="index.js"></script>
+</body>
+</html>
